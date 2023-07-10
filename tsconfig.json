@@ -1,5 +1,6 @@
 {
-  "extends": "expo/tsconfig.base",
+  // "extends": "expo/tsconfig.base",
+  "extends": "@tsconfig/react-native/tsconfig.json",
   "compilerOptions": {
     "strict": true,
     "baseUrl": "./",
@@ -16,12 +17,10 @@
       "@storage/*": [
         "./src/storage/*"
       ],
-      "@theme/*": [
-        "./src/theme/*"
-      ],
       "@utils/*": [
         "./src/utils/*"
       ]
     }
   }
 }
+
