@@ -1,5 +1,5 @@
 import { TouchableOpacity } from "react-native";
-import { styled } from "styled-components/native";
+import { styled, css } from "styled-components/native";
 
 export type ButttonTypesStyleProps = "PRIMARY" | "SECONDARY";
 
@@ -14,7 +14,7 @@ export const Container = styled(TouchableOpacity)<Props>`
   max-height: 56px;
 
   border-radius: 6px;
-  
+
   align-items: center;
   justify-content: center;
 
@@ -24,13 +24,12 @@ export const Container = styled(TouchableOpacity)<Props>`
     props.type === "PRIMARY"
       ? props.theme.COLORS.GREEN_700
       : props.theme.COLORS.RED_DARK};
-
-  
-
 `;
 
 export const Title = styled.Text`
-  font-size: ${(props) => props.theme.FONT_SIZE.MD};
-  font-family: ${(props) => props.theme.FONT_FAMILY.BOLD};
-  color: ${(props) => props.theme.COLORS.WHITE};
-  `
+  ${({ theme }) => css`
+    font-size: ${theme.FONT_SIZE.MD};
+    font-family: ${theme.FONT_FAMILY.BOLD};
+    color: ${theme.COLORS.WHITE};
+  `};
+`;
