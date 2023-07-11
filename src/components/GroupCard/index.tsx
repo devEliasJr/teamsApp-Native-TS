@@ -3,6 +3,7 @@ import { TouchableOpacityProps } from "react-native";
 
 type Props = TouchableOpacityProps & {
   title: string;
+  type?: string;
 };
 
 export function GroupCard({ title, ...rest }: Props) {
