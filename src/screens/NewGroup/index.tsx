@@ -1,7 +1,8 @@
 import { useState } from "react";
-import { Container, Content, Icon } from "./styles";
-import { useNavigation } from "@react-navigation/native";
 import { Alert } from "react-native";
+import { useNavigation } from "@react-navigation/native";
+
+import { Container, Content, Icon } from "./styles";
 
 import { groupCreate } from "@storage/group/groupCreate";
 import { Header } from "@components/Header";
@@ -29,7 +30,6 @@ export function NewGroup() {
         Alert.alert("Novo Grupo", error.message);
       } else {
         Alert.alert("Novo Grupo", "Não foi possível criar um novo grupo.");
-        console.log(error);
       }
     }
   }
