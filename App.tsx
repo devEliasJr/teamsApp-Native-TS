@@ -1,14 +1,15 @@
+import theme from "./src/theme";
 import { StatusBar } from "expo-status-bar";
-import { ThemeProvider } from "styled-components";
 import {
   useFonts,
   Roboto_400Regular,
   Roboto_700Bold,
 } from "@expo-google-fonts/roboto";
-import theme from "./src/theme";
 
+import { ThemeProvider } from "styled-components";
 import { Loading } from "@components/Loading";
-import { Players } from "@screens/Players";
+import { Routes } from "./src/routes";
+
 
 
 export default function App() {
@@ -23,7 +24,7 @@ export default function App() {
         style="light"
         translucent
       />
-      {fontsLoaded ?  <Players /> : <Loading />}
+      {fontsLoaded ?  <Routes /> : <Loading />}
     </ThemeProvider>
   );
 }
